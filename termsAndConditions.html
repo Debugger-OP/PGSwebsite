@@ -1,0 +1,668 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>T&C - People Grow Financial Solution</title>
+
+    <!-- Tailwind & Chart.js -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <!-- Internal Styles -->
+    <style>
+      .scrollbar-hide::-webkit-scrollbar {
+        display: none;
+      }
+      .scrollbar-hide {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+      }
+
+      @keyframes scroll {
+        0% {
+          transform: translateX(0);
+        }
+        100% {
+          transform: translateX(-50%);
+        }
+      }
+
+      .animate-scroll {
+        animation: scroll 40s linear infinite;
+      }
+    </style>
+
+    <!-- SwiperJS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  </head>
+  <body class="bg-white text-gray-800 font-sans">
+    <!-- Navbar -->
+    <header class="bg-white shadow sticky top-0 z-[999] relative">
+      <div
+        class="container mx-auto px-4 py-4 flex justify-between items-center"
+      >
+        <h1 class="text-xl font-bold text-blue-600">
+          People Grow Financial Solution
+        </h1>
+
+        <nav class="space-x-6 flex items-center ml-auto max-w-[75%]">
+          <a href="./index.html" class="hover:text-yellow-600">Home</a>
+          <a href="./about.html" class="hover:text-yellow-600">About</a>
+
+          <div class="relative group">
+            <button
+              class="flex items-center gap-1 hover:text-yellow-600 focus:outline-none"
+            >
+              Loans
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="w-4 h-4 mt-0.5"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M19 9l-7 7-7-7"
+                />
+              </svg>
+            </button>
+
+            <ul
+              class="absolute left-0 -translate-x-1/2 mt-2 w-64 bg-white shadow-lg rounded-md z-50 py-2 invisible opacity-0 group-hover:visible group-hover:opacity-100 transition-all duration-200"
+            >
+              <li>
+                <a
+                  href="./loans/personalLoan.html"
+                  class="block px-5 py-2 hover:bg-gray-100"
+                  >PERSONAL LOAN</a
+                >
+              </li>
+              <li>
+                <a
+                  href="./loans/loanAgainstProperty.html"
+                  class="block px-5 py-2 hover:bg-gray-100"
+                  >LOAN AGAINST PROPERTY</a
+                >
+              </li>
+              <li>
+                <a
+                  href="./loans/businessLoan.html"
+                  class="block px-5 py-2 hover:bg-gray-100"
+                  >BUSINESS LOAN</a
+                >
+              </li>
+              <li>
+                <a
+                  href="./loans/homeLoan.html"
+                  class="block px-5 py-2 hover:bg-gray-100"
+                  >HOME LOAN</a
+                >
+              </li>
+
+              <!-- CAR LOANS with left-side hover submenu -->
+              <li class="relative group/car">
+                <a
+                  href="#"
+                  class="block px-5 py-2 hover:bg-gray-100 flex justify-between items-center"
+                >
+                  CAR LOANS
+                  <!-- Arrow pointing left -->
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="w-4 h-4 ml-2 transform rotate-180"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M9 5l7 7-7 7"
+                    />
+                  </svg>
+                </a>
+
+                <!-- Sub-dropdown (appears on hover of CAR LOANS only) -->
+                <ul
+                  class="absolute top-0 right-full mr-1 w-56 bg-white shadow-lg rounded-md z-50 py-2 invisible opacity-0 group-hover/car:visible group-hover/car:opacity-100 transition-all duration-200"
+                >
+                  <li>
+                    <a
+                      href="./loans/usedCarLoan.html"
+                      class="block px-5 py-2 hover:bg-gray-100"
+                      >Used Car Loan</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="./loans/newCarLoan.html"
+                      class="block px-5 py-2 hover:bg-gray-100"
+                      >New Car Loan</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="./loans/carRefinance.html"
+                      class="block px-5 py-2 hover:bg-gray-100"
+                      >Car Refinance</a
+                    >
+                  </li>
+                </ul>
+              </li>
+
+              <li>
+                <a
+                  href="./loans/unsecuredOdLimit.html"
+                  class="block px-5 py-2 hover:bg-gray-100"
+                  >UNSECURED OD LIMIT</a
+                >
+              </li>
+              <li>
+                <a
+                  href="./loans/workingCapital.html"
+                  class="block px-5 py-2 hover:bg-gray-100"
+                  >WORKING CAPITAL</a
+                >
+              </li>
+              <li>
+                <a
+                  href="./loans/educationLoan.html"
+                  class="block px-5 py-2 hover:bg-gray-100"
+                  >EDUCATION LOAN</a
+                >
+              </li>
+            </ul>
+          </div>
+          <a href="contactus.html" class="hover:text-yellow-600">Contact Us</a>
+        </nav>
+      </div>
+    </header>
+
+    <section class="text-center py-6 shadow-sm">
+      <h1 class="text-5xl font-bold text-red-600">Terms & Conditions</h1>
+    </section>
+
+    <!-- Features Section -->
+    <section
+      id="features"
+      class="scroll-mt-6 px-6 md:px-16 py-12 bg-white text-gray-800"
+    >
+      <h2 class="text-2xl md:text-4xl font-semibold">Terms and Conditions</h2>
+
+      <p class="text-xl mt-5">
+        Welcome to People Grow Financial Solution's website. By accessing and
+        using our services, you agree to comply with the terms and conditions
+        outlined below. Please read this agreement carefully before proceeding.
+      </p>
+
+      <h2 class="text-2xl md:text-4xl font-semibold mt-10">Eligibility:</h2>
+
+      <p class="text-xl mt-5">
+        To use our loan services, you must be at least 18 years old and possess
+        the legal capacity to enter into a financial agreement. By accessing our
+        website, you confirm that you meet these eligibility criteria.
+      </p>
+
+      <h2 class="text-2xl md:text-4xl font-semibold mt-10">
+        Loan Application and Approval:
+      </h2>
+
+      <p class="text-xl mt-5">
+        Submitting a loan application through our website does not guarantee
+        approval. People Grow Financial Solution reserves the right to assess
+        applications based on various factors, including creditworthiness and
+        compliance with our lending criteria.
+      </p>
+
+      <h2 class="text-2xl md:text-4xl font-semibold mt-10">
+        Accuracy of Information:
+      </h2>
+
+      <p class="text-xl mt-5">
+        You are responsible for providing accurate and up-to-date information
+        during the loan application process. Misrepresentation of personal or
+        financial details may result in the rejection of your application.
+      </p>
+
+      <h2 class="text-2xl md:text-4xl font-semibold mt-10">
+        Loan Terms and Repayment:
+      </h2>
+
+      <p class="text-xl mt-5">
+        Upon approval, loan terms, including interest rates, repayment
+        schedules, and any associated fees, will be communicated to you. It is
+        your responsibility to review and accept these terms before proceeding
+        with the loan agreement.
+      </p>
+
+      <h2 class="text-2xl md:text-4xl font-semibold mt-10">
+        Interest Rates and Fees:
+      </h2>
+
+      <p class="text-xl mt-5">
+        People Grow Financial Solution reserves the right to determine interest
+        rates and applicable fees based on various factors, including market
+        conditions and the borrower's credit profile. Any changes to interest
+        rates or fees will be communicated to you in advance.
+      </p>
+
+      <h2 class="text-2xl md:text-4xl font-semibold mt-10">
+        Security and Confidentiality:
+      </h2>
+
+      <p class="text-xl mt-5">
+        We employ industry-standard security measures to protect your personal
+        and financial information. However, we cannot guarantee the absolute
+        security of data transmitted over the Internet. By using our services,
+        you acknowledge and accept the inherent risks.
+      </p>
+
+      <h2 class="text-2xl md:text-4xl font-semibold mt-10">
+        Termination of Services:
+      </h2>
+
+      <p class="text-xl mt-5">
+        People Grow Financial Solution reserves the right to terminate or
+        suspend services at its discretion, without notice, for any violation of
+        these terms and conditions.
+      </p>
+
+      <h2 class="text-2xl md:text-4xl font-semibold mt-10">
+        Intellectual Property:
+      </h2>
+
+      <p class="text-xl mt-5">
+        All content, trademarks, and intellectual property on this website are
+        owned by People Grow Financial Solution. Unauthorized use or
+        reproduction is strictly prohibited.
+      </p>
+
+      <h2 class="text-2xl md:text-4xl font-semibold mt-10">
+        Changes to Terms and Conditions:
+      </h2>
+
+      <p class="text-xl mt-5">
+        We reserve the right to modify these terms and conditions at any time
+        without prior notice. It is your responsibility to review this page
+        periodically for updates.
+      </p>
+
+      <h2 class="text-2xl md:text-4xl font-semibold mt-10">Contact Us:</h2>
+
+      <p class="text-xl mt-5">
+        If you have any questions or concerns about our terms and conditions,
+        please contact us at info@shivayfinancialconsultant.com.
+      </p>
+
+      <p class="text-xl mt-10 font-bold mb-10">
+        By using our services, you acknowledge that you have read, understood,
+        and agreed to these terms and conditions.
+      </p>
+    </section>
+    <!-- We Are Available in Cities -->
+    <!-- we are available in  -->
+    <section class="text-center py-6">
+      <h2 class="text-xl md:text-2xl font-medium text-red-600 mb-6">
+        We Are Available In Cities
+      </h2>
+
+      <div class="bg-red-800 text-white px-6 py-6 max-w-6xl mx-auto rounded-md">
+        <div
+          class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-y-3 gap-x-8 text-left font-semibold text-base"
+        >
+          <div>
+            <p>Ludhiana</p>
+            <p>Raipur</p>
+            <p>Hazira</p>
+            <p>Vadodara</p>
+            <p>Gujarat</p>
+            <p>Nashik</p>
+            <p>Valsad</p>
+            <p>Mumbai</p>
+            <p>Hyderabad</p>
+          </div>
+          <div>
+            <p>Jalandhar</p>
+            <p>Indore</p>
+            <p>Mangalore</p>
+            <p>Daman</p>
+            <p>Umbergaon</p>
+            <p>Jodhpur</p>
+            <p>Pune</p>
+            <p>Udvada</p>
+            <p>Ahmedabad</p>
+          </div>
+          <div>
+            <p>Vikramgad</p>
+            <p>Surat</p>
+            <p>Bhopal</p>
+            <p>Jaipur</p>
+            <p>Silvassa</p>
+            <p>Kevadiya</p>
+            <p>Kolkata</p>
+            <p>Vapi</p>
+          </div>
+          <div>
+            <p>Bharuch</p>
+            <p>Saputara</p>
+            <p>Nagpur</p>
+            <p>Varanasi</p>
+            <p>Delhi</p>
+            <p>Diu</p>
+            <p>Bangalore</p>
+            <p>Lucknow</p>
+          </div>
+        </div>
+
+        <!-- Contact Us Button -->
+        <div class="mt-8 flex justify-center">
+          <a
+            href="../contactus.html"
+            class="bg-yellow-500 text-white px-6 py-3 rounded-full border-2 border-yellow-500 hover:bg-white hover:text-black transition-colors duration-300"
+          >
+            Contact Us
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <!-- Footer -->
+    <footer class="bg-black text-yellow-400 py-12">
+      <div
+        class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-4 gap-y-10 gap-x-14"
+      >
+        <!-- Logo & Contact -->
+        <div>
+          <div class="flex items-center mb-6">
+            <img
+              src="your_logo.png"
+              alt="Logo"
+              class="h-14 w-14 mr-3 animate-pulse"
+            />
+            <div class="font-bold text-lg">
+              People Grow Financial<br />Solution
+            </div>
+          </div>
+          <p class="text-sm text-gray-400 mb-4">
+            Providing smart solutions for all your financial needs.
+          </p>
+          <div class="text-sm space-y-2">
+            <p class="flex items-center hover:text-white transition">
+              📞 <span class="ml-2">+91 9953530096</span>
+            </p>
+            <p class="ml-6 text-gray-500">9:30am - 7:00pm</p>
+          </div>
+        </div>
+
+        <!-- Loans -->
+        <div>
+          <h3 class="text-lg font-semibold mb-5 text-yellow-300">Loans</h3>
+          <div class="grid grid-cols-2 gap-x-10 gap-y-3 text-sm">
+            <a
+              href="./loans/personalLoan.html"
+              class="hover:text-white transition"
+              >› Personal Loan</a
+            >
+            <a
+              href="./loans/usedCarLoan.html"
+              class="hover:text-white transition"
+              >› Used Car Loan</a
+            >
+
+            <a href="./loans/homeLoan.html" class="hover:text-white transition"
+              >› Home Loan</a
+            >
+            <a
+              href="./loans/carRefinance.html"
+              class="hover:text-white transition"
+              >› Car Refinance</a
+            >
+
+            <a
+              href="./loans/businessLoan.html"
+              class="hover:text-white transition"
+              >› Business Loan</a
+            >
+            <a
+              href="./loans/educationLoan.html"
+              class="hover:text-white transition"
+              >› Education Loan</a
+            >
+
+            <a
+              href="./loans/loanAgainstProperty.html"
+              class="hover:text-white whitespace-nowrap transition"
+              >› Loan Against Property</a
+            >
+            <a
+              href="./loans/workingCapital.html"
+              class="hover:text-white transition"
+              >› Working Capital</a
+            >
+
+            <a
+              href="./loans/newCarLoan.html"
+              class="hover:text-white transition"
+              >› New Car Loan</a
+            >
+          </div>
+        </div>
+
+        <!-- Knowledge Hub -->
+        <div>
+          <h3 class="text-lg font-semibold mb-5 text-yellow-300">
+            Knowledge Hub
+          </h3>
+          <div class="grid grid-cols-2 gap-x-10 gap-y-3 text-sm">
+            <a
+              href="./loans/personalLoan.html"
+              class="hover:text-white transition"
+              >› Personal Loan</a
+            >
+            <a
+              href="./loans/usedCarLoan.html"
+              class="hover:text-white transition"
+              >› Used Car Loan</a
+            >
+
+            <a href="./loans/homeLoan.html" class="hover:text-white transition"
+              >› Home Loan</a
+            >
+            <a
+              href="./loans/carRefinance.html"
+              class="hover:text-white transition"
+              >› Car Refinance</a
+            >
+
+            <a
+              href="./loans/businessLoan.html"
+              class="hover:text-white transition"
+              >› Business Loan</a
+            >
+            <a
+              href="./loans/educationLoan.html"
+              class="hover:text-white transition"
+              >› Education Loan</a
+            >
+
+            <a
+              href="./loans/loanAgainstProperty.html"
+              class="hover:text-white whitespace-nowrap transition"
+              >› Loan Against Property</a
+            >
+            <a
+              href="./loans/workingCapital.html"
+              class="hover:text-white transition"
+              >› Working Capital</a
+            >
+
+            <a
+              href="./loans/newCarLoan.html"
+              class="hover:text-white transition"
+              >› New Car Loan</a
+            >
+          </div>
+        </div>
+
+        <!-- Company Info -->
+        <div>
+          <h3 class="text-lg font-semibold mb-5 text-yellow-300">Company</h3>
+          <ul class="space-y-3 text-sm">
+            <li>
+              <a
+                href="about.html"
+                target="_blank"
+                class="hover:text-white transition"
+                >› About Us</a
+              >
+            </li>
+            <li>
+              <a
+                href="contactus.html"
+                target="_blank"
+                class="hover:text-white transition"
+                >› Contact Us</a
+              >
+            </li>
+            <li>
+              <a href="#" class="hover:text-white transition">› Offers</a>
+            </li>
+            <li>
+              <a href="./privacyPolicy.html" class="hover:text-white transition"
+                >› Privacy Policy</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Divider -->
+      <div
+        class="border-t border-yellow-700 mt-10 pt-6 flex flex-col md:flex-row items-center justify-between px-6 text-gray-500 text-sm"
+      >
+        <p>© 2025 People Grow Financial Solution. All Rights Reserved.</p>
+
+        <!-- Social Icons -->
+        <div class="flex space-x-5 mt-4 md:mt-0">
+          <a href="#" class="hover:scale-125 transition-transform duration-300"
+            ><img
+              src="./assests/icons/2023_Facebook_icon.svg.png"
+              alt="FB"
+              class="h-5 w-5"
+          /></a>
+          <a href="#" class="hover:scale-125 transition-transform duration-300"
+            ><img
+              src="./assests/icons/Instagram_logo_2016.svg.webp"
+              alt="IG"
+              class="h-5 w-5"
+          /></a>
+          <a href="#" class="hover:scale-125 transition-transform duration-300"
+            ><img
+              src="./assests/icons/WhatsApp.svg.webp"
+              alt="WA"
+              class="h-5 w-5"
+          /></a>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button
+      id="backToTopBtn"
+      class="fixed right-6 bottom-6 bg-yellow-500 text-white p-3 rounded-full shadow-lg transition-all duration-300 hover:bg-yellow-600 hover:scale-110 opacity-0 pointer-events-none z-50"
+      title="Back to top"
+    >
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        class="h-6 w-6"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke="currentColor"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          d="M5 15l7-7 7 7"
+        />
+      </svg>
+    </button>
+
+    <script>
+      // FAQ toggle
+      document.querySelectorAll(".faq-question").forEach((button) => {
+        button.addEventListener("click", () => {
+          const answer = button.nextElementSibling;
+          const allAnswers = document.querySelectorAll(".faq-answer");
+          const allButtons = document.querySelectorAll(
+            ".faq-question span:last-child"
+          );
+
+          // Close all answers except the one clicked
+          allAnswers.forEach((a) => {
+            if (a !== answer) {
+              a.classList.add("hidden");
+            }
+          });
+
+          // Reset all icons
+          allButtons.forEach((icon) => {
+            icon.textContent = "+";
+          });
+
+          // Toggle the clicked one
+          if (answer.classList.contains("hidden")) {
+            answer.classList.remove("hidden");
+            button.querySelector("span:last-child").textContent = "-";
+          } else {
+            answer.classList.add("hidden");
+            button.querySelector("span:last-child").textContent = "+";
+          }
+        });
+      });
+
+      //backtotop
+      const backToTopBtn = document.getElementById("backToTopBtn");
+      const footer = document.querySelector("footer");
+
+      window.addEventListener("scroll", () => {
+        const scrollY = window.scrollY;
+        const windowHeight = window.innerHeight;
+        const documentHeight = document.documentElement.scrollHeight;
+
+        // Show/hide button
+        if (scrollY > 400) {
+          backToTopBtn.classList.remove("opacity-0", "pointer-events-none");
+          backToTopBtn.classList.add("opacity-100");
+        } else {
+          backToTopBtn.classList.add("opacity-0", "pointer-events-none");
+          backToTopBtn.classList.remove("opacity-100");
+        }
+
+        // Push button up when near footer
+        const footerRect = footer.getBoundingClientRect();
+        const isFooterVisible = footerRect.top < window.innerHeight;
+
+        if (isFooterVisible) {
+          backToTopBtn.style.bottom = "100px"; // lift above icons
+        } else {
+          backToTopBtn.style.bottom = "24px"; // default (6 = 1.5rem = 24px)
+        }
+      });
+
+      backToTopBtn.addEventListener("click", () => {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      });
+    </script>
+  </body>
+</html>

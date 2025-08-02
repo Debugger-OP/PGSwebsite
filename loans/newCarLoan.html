@@ -1,0 +1,1019 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>New Car Loan - People Grow Financial Solution</title>
+
+    <!-- Tailwind & Chart.js -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <!-- Internal Styles -->
+    <style>
+      .scrollbar-hide::-webkit-scrollbar {
+        display: none;
+      }
+      .scrollbar-hide {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+      }
+
+      @keyframes scroll {
+        0% {
+          transform: translateX(0);
+        }
+        100% {
+          transform: translateX(-50%);
+        }
+      }
+
+      .animate-scroll {
+        animation: scroll 40s linear infinite;
+      }
+    </style>
+
+    <!-- SwiperJS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  </head>
+  <body class="bg-white text-gray-800 font-sans">
+    <!-- Navbar -->
+    <header class="bg-white shadow sticky top-0 z-[999] relative">
+      <div
+        class="container mx-auto px-4 py-4 flex justify-between items-center"
+      >
+        <h1 class="text-xl font-bold text-yellow-600">
+          People Grow Financial Solution
+        </h1>
+
+        <nav class="space-x-6 flex items-center ml-auto max-w-[75%]">
+          <a href="../index.html" class="hover:text-yellow-600">Home</a>
+          <a href="../about.html" class="hover:text-yellow-600">About</a>
+
+          <div class="relative group">
+            <button
+              class="flex items-center gap-1 hover:text-yellow-600 focus:outline-none"
+            >
+              Loans
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="w-4 h-4 mt-0.5"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M19 9l-7 7-7-7"
+                />
+              </svg>
+            </button>
+
+            <ul
+              class="absolute left-0 -translate-x-1/2 mt-2 w-64 bg-white shadow-lg rounded-md z-50 py-2 invisible opacity-0 group-hover:visible group-hover:opacity-100 transition-all duration-200"
+            >
+              <li>
+                <a href="./personalLoan.html" class="block px-5 py-2 hover:bg-gray-100"
+                  >PERSONAL LOAN</a
+                >
+              </li>
+              <li>
+                <a
+                  href="loanAgainstProperty.html"
+                  class="block px-5 py-2 hover:bg-gray-100"
+                  >LOAN AGAINST PROPERTY</a
+                >
+              </li>
+              <li>
+                <a
+                  href="businessLoan.html"
+                  class="block px-5 py-2 hover:bg-gray-100"
+                  >BUSINESS LOAN</a
+                >
+              </li>
+              <li>
+                <a
+                  href="homeLoan.html"
+                  class="block px-5 py-2 hover:bg-gray-100"
+                  >HOME LOAN</a
+                >
+              </li>
+
+              <!-- CAR LOANS with left-side hover submenu -->
+              <li class="relative group/car">
+                <span
+                  href="#"
+                  class="block px-5 py-2 cursor-pointer hover:bg-gray-100 flex justify-between items-center"
+                >
+                  CAR LOANS
+                  <!-- Arrow pointing left -->
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="w-4 h-4 ml-2 transform rotate-180"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M9 5l7 7-7 7"
+                    />
+                  </svg>
+                </span>
+
+                <!-- Sub-dropdown (appears on hover of CAR LOANS only) -->
+                <ul
+                  class="absolute top-0 right-full mr-1 w-56 bg-white shadow-lg rounded-md z-50 py-2 invisible opacity-0 group-hover/car:visible group-hover/car:opacity-100 transition-all duration-200"
+                >
+                  <li>
+                    <a
+                      href="../loans/usedCarLoan.html"
+                      class="block px-5 py-2 hover:bg-gray-100"
+                      >Used Car Loan</a
+                    >
+                  </li>
+                  
+                  </li>
+                  <li>
+                    <a
+                      href="../loans/carRefinance.html"
+                      class="block px-5 py-2 hover:bg-gray-100"
+                      >Car Refinance</a
+                    >
+                  </li>
+                </ul>
+              </li>
+
+              <li>
+                <a
+                  href="unsecuredOdLimit.html"
+                  class="block px-5 py-2 hover:bg-gray-100"
+                  >UNSECURED OD LIMIT</a
+                >
+              </li>
+              <li>
+                <a
+                  href="workingCapital.html"
+                  class="block px-5 py-2 hover:bg-gray-100"
+                  >WORKING CAPITAL</a
+                >
+              </li>
+
+              <li>
+                <a
+                  href="./educationLoan.html"
+                  class="block px-5 py-2 hover:bg-gray-100"
+                  >EDUCATION LOAN</a
+                >
+              </li>
+            </ul>
+          </div>
+          <a href="contactus.html" class="hover:text-yellow-600">Contact Us</a>
+        </nav>
+      </div>
+    </header>
+
+    <section class="text-center py-6 shadow-sm">
+      <h1 class="text-4xl font-bold text-yellow-600">New Car Loan</h1>
+    </section>
+
+    <!-- Subtle Tab Navigation -->
+    <div class="bg-yellow-50 z-50 sticky top-11 shadow-sm">
+      <nav class="py-4">
+        <div
+          class="flex justify-center flex-wrap gap-6 text-gray-700 font-medium"
+        >
+          <a href="#features" class="hover:text-blue-600 transition"
+            >FEATURES</a
+          >
+          <a href="#eligibility" class="hover:text-blue-600 transition"
+            >ELIGIBILITY</a
+          >
+          <a href="#documentation" class="hover:text-blue-600 transition"
+            >DOCUMENTATION</a
+          >
+
+          <a href="#feesAndCharges" class="hover:text-blue-600 transition"
+            >FEES AND CHARGES</a
+          >
+          <a href="#reviews" class="hover:text-blue-600 transition">REVIEWS</a>
+          <a href="#faqs" class="hover:text-blue-600 transition">FAQ'S</a>
+        </div>
+      </nav>
+      <!-- Optional Divider -->
+      <hr class="border-t border-gray-200" />
+    </div>
+
+    <!-- Features Section -->
+    <section
+      id="features"
+      class="scroll-mt-20 px-6 md:px-16 py-12 bg-white text-gray-800"
+    >
+      <h2 class="text-2xl md:text-4xl font-semibold mb-4">
+        New Car Loan Features
+      </h2>
+      <h3 class="text-xl md:text-2xl text-gray-700 font-medium mb-6">
+        Features and Benefits of our New Car Loan
+      </h3>
+
+      <ul class="list-disc list-outside pl-5 space-y-4 text-lg leading-relaxed">
+        <li>
+          <span class="font-semibold">Competitive Interest Rates: </span>People Grow Financial Solution offers new car loans with competitive and attractive interest rates, ensuring affordability for borrowers.
+        </li>
+        <li>
+          <span class="font-semibold">High Loan-to-Value Ratio: </span>
+          Borrowers can benefit from a high loan-to-value (LTV) ratio, allowing
+          them to finance a significant portion of the new car's value through
+          the loan.
+        </li>
+        <li>
+          <span class="font-semibold">Flexible Loan Tenure: </span>
+          People Grow Financial Solution provides flexible loan tenure options,
+          allowing borrowers to choose a repayment period that aligns with their
+          financial situation and preferences.
+        </li>
+        <li>
+          <span class="font-semibold"
+            >Quick and Streamlined Approval Process: </span
+          >People Grow Financial Solution ensures a quick and efficient loan
+          application process, with streamlined approval procedures,
+          facilitating a seamless experience for borrowers.
+        </li>
+        <li>
+          <span class="font-semibold">Customised Loan Solutions: </span
+          >Borrowers can access personalised loan solutions, tailored to meet
+          individual needs and financial capabilities, ensuring that the new car
+          loan aligns with specific requirements.
+        </li>
+        <li>
+          <span class="font-semibold">Transparent Terms and Conditions: </span
+          >People Grow Financial Solution maintains transparency in loan terms
+          and conditions, with no hidden fees or surprises, providing clarity to
+          borrowers throughout the loan process.
+        </li>
+        <li>
+          <span class="font-semibold">Additional Benefits: </span>Depending on
+          the loan program, People Grow Financial Solution may offer additional
+          benefits such as special interest rate promotions, zero or low
+          processing fees, and insurance packages, enhancing the overall value
+          for borrowers.
+        </li>
+      </ul>
+    </section>
+
+    <!-- Eligibility Section Preview Box (Optional Light Background) -->
+    <section class="bg-yellow-50 rounded-xl mx-6 md:mx-16 p-8">
+      <!-- Title + Button -->
+      <div class="flex flex-col md:flex-row md:items-center md:justify-between">
+        <div>
+          <h2 class="text-2xl md:text-3xl font-semibold text-gray-800">
+            New Car Loan Eligibility and Documents
+          </h2>
+          <p class="text-sm text-gray-600 mt-1">
+            Check out the Eligibility criteria for our New Car Loan.
+          </p>
+        </div>
+        <a
+          href="#apply"
+          class="mt-4 md:mt-0 bg-green-600 hover:bg-green-700 text-white font-bold px-6 py-2 rounded-md transition self-start md:self-auto"
+        >
+          APPLY
+        </a>
+      </div>
+    </section>
+
+    <!-- eligibility criteria section -->
+    <section
+      id="eligibility"
+      class="scroll-mt-20 px-6 md:px-16 py-12 bg-white text-gray-800"
+    >
+      <h2 class="text-2xl md:text-4xl font-semibold mb-4">
+        Eligibility Criteria for New Car Loan
+      </h2>
+      <p class="text-xl mb-5">
+        The following outlines the general eligibility criteria established by
+        financial lenders for individuals seeking a New Car Loan:
+      </p>
+
+      <ul
+        class="list-disc list-outside pl-6 space-y-5 text-lg leading-relaxed text-gray-800 mb-6"
+      >
+        <li>
+          <span class="font-semibold">Citizenship & Age:</span> Exclusive to
+          Indian citizens, applicants must be a minimum of 18 years old at the
+          time of application, and the loan term should conclude by the age of
+          75 years.
+        </li>
+        <li>
+          <span class="font-semibold">Maximum Tenure: </span>The loan tenure can
+          extend up to 15 years, with repayment concluding by the age of 60
+          years.
+        </li>
+        <li>
+          <span class="font-semibold">Monthly Income: </span>There is no
+          predefined minimum monthly income requirement.
+        </li>
+      </ul>
+    </section>
+
+    <section
+      id="documentation"
+      class="scroll-mt-28 bg-white rounded-xl mt-0 md:mx-16"
+    >
+      <h2 class="text-2xl md:text-4xl font-semibold mb-4">
+        Documents Required for Home Loan
+      </h2>
+      <p class="mb-6 text-lg text-gray-700">
+        The following documents are required in order to apply for a Car
+        Refinance from People Grow Financial Solution:
+      </p>
+      <div class="mb-6">
+        <h2 class="font-semibold text-xl text-gray-900 mb-2">
+          Photo Identity Proof (Any one):
+        </h2>
+        <ul class="list-disc text-lg pl-6 text-gray-800 space-y-1">
+          <li>PAN Card</li>
+          <li>Aadhar Card</li>
+          <li>Passport</li>
+          <li>Latest Passport Size Photo</li>
+          <li>Voter’s ID</li>
+        </ul>
+      </div>
+
+      <div class="mb-6">
+        <h2 class="font-semibold text-xl text-gray-900 mb-2">
+          Address Proof (Any one):
+        </h2>
+        <ul class="list-disc text-lg pl-6 text-gray-800 space-y-1">
+          <li>Aadhar Card</li>
+          <li>
+            Utility Bill (telephone, electricity, water, gas) – less than 2
+            months old
+          </li>
+          <li>Passport</li>
+          <li>Driving Licence</li>
+          <li>Current and Permanent Address Proof</li>
+        </ul>
+      </div>
+
+      <div class="mb-6">
+        <h2 class="font-semibold text-xl text-gray-900 mb-2">
+          Proof of Income:
+        </h2>
+
+        <h2 class="font-semibold text-xl mt-4 text-gray-900 mb-2">
+          For Salaried Professionals:
+        </h2>
+        <ul class="list-disc text-lg pl-6 text-gray-800 space-y-1">
+          <li>Salary slips (Last 3 months)</li>
+          <li>Form 16 of Latest 2 years</li>
+          <li>Last 6 Months Saving Account Bank statement</li>
+          <li>
+            If the current employment of the applicant is less than one year
+            then the current Appointment letter and the last company’s relieving
+            letter will be required.
+          </li>
+        </ul>
+
+        <h2 class="font-semibold text-xl mt-8 text-gray-900 mb-2">
+          For Self-Employed Professionals / non-professional:
+        </h2>
+        <ul class="list-disc text-lg pl-6 text-gray-800 space-y-1">
+          <li>
+            ITR Return for the last 3 years along with income of computation,
+            Financial Report, Audit Report, P&L Statement and Balance Sheet.
+          </li>
+          <li>GST Registration</li>
+          <li>GST Return of Last 2 years.</li>
+          <li>Current & savings Account Bank Statement of past 6 months.</li>
+          <li>26AS of the latest 2 years</li>
+        </ul>
+
+        <h2 class="font-semibold text-xl mt-8 text-gray-900 mb-2">
+          For Partnership Firm:
+        </h2>
+        <ul class="list-disc text-lg pl-6 text-gray-800 space-y-1">
+          <li>Partnership Deed</li>
+          <li>Shareholder Certificate</li>
+          <li>Director’s List and Director KYC</li>
+          <li>Firm’s PAN Card</li>
+          <li>26AS of the latest 2 years</li>
+        </ul>
+
+        <h2 class="font-semibold text-xl mt-8 text-gray-900 mb-2">
+          For Private Limited Company:
+        </h2>
+        <ul class="list-disc text-lg pl-6 text-gray-800 space-y-1">
+          <li>MOA</li>
+          <li>AOA</li>
+          <li>LOD</li>
+          <li>LOS</li>
+          <li>BRB</li>
+          <li>Director’s KYC</li>
+          <li>Company's PAN Card</li>
+          <li>26AS of the latest 2 years</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="mx-5 scroll-mt-28" id="feesAndCharges">
+      <h2 class="text-2xl mx-8 md:text-4xl font-semibold mb-4">
+        Fees and Charges for Car Refinance
+      </h2>
+      <p class="mb-6 mx-8 text-lg text-gray-700">
+        The fees and charges of Car Refinance usually vary from lender to lender
+        and from case to case. The aforementioned table will give you a fair
+        idea of the fees and charges related to Car Refinance:
+      </p>
+
+      <section class="flex justify-center mt-6">
+        <div class="bg-yellow-300 p-4 rounded-lg shadow-md">
+          <table class="border-collapse bg-white">
+            <thead>
+              <tr class="bg-gray-200">
+                <th class="text-left px-4 py-3 text-lg font-semibold">
+                  Particulars
+                </th>
+                <th class="text-left px-4 py-3 text-lg font-semibold">
+                  Charges
+                </th>
+              </tr>
+            </thead>
+            <tbody class="bg-blue-50">
+              <tr class="border-t">
+                <td class="px-4 py-3">Loan Processing Fees</td>
+                <td class="px-4 py-3">Upto 4% of the total loan amount</td>
+              </tr>
+              <tr class="border-t">
+                <td class="px-4 py-3">Loan Cancellation</td>
+                <td class="px-4 py-3">Usually around 3000</td>
+              </tr>
+              <tr class="border-t">
+                <td class="px-4 py-3">Stamp Duty Charges</td>
+                <td class="px-4 py-3">
+                  Payable as per the state lawPayable as per the state law
+                </td>
+              </tr>
+              <tr class="border-t">
+                <td class="px-4 py-3">Rate of Interest</td>
+                <td class="px-4 py-3">8.00% per annum onwards</td>
+              </tr>
+              <tr class="border-t">
+                <td class="px-4 py-3">Penal Charges</td>
+                <td class="px-4 py-3">2% on the delayed payment</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+    </section>
+
+    <div class="bg-yellow-100 p-4 mt-6 rounded-lg text-gray-800">
+      <p>
+        Other fees and charges that lenders may levy on your personal loan
+        include documentation charges, verification charges, duplicate statement
+        charges, NOC certificate charges and swap.
+      </p>
+    </div>
+
+
+    <!-- reviews -->
+    <section class="bg-white scroll-mt-24 py-10 px-6 md:px-16" id="reviews">
+      <h2
+        class="text-2xl md:text-3xl font-semibold text-gray-800 mb-8 text-center"
+      >
+        Personal Loan Reviews
+      </h2>
+
+      <div class="grid gap-6 md:grid-cols-3">
+        <!-- Card 1 -->
+        <div
+          class="bg-yellow-50 p-6 rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300"
+        >
+          <div class="flex items-center gap-4 mb-4">
+            <div
+              class="w-12 h-12 bg-blue-500 text-white rounded-full flex items-center justify-center font-bold text-lg"
+            >
+              AS
+            </div>
+            <div>
+              <h3 class="font-semibold text-gray-800">Anjali Sharma</h3>
+              <p class="text-sm text-gray-500">Marketing Executive</p>
+            </div>
+          </div>
+          <p class="text-gray-700">
+            The personal loan process was incredibly smooth. The interest rates
+            were competitive, and I received the funds quickly without hassle.
+          </p>
+        </div>
+
+        <!-- Card 2 -->
+        <div
+          class="bg-gray-50 p-6 rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300"
+        >
+          <div class="flex items-center gap-4 mb-4">
+            <div
+              class="w-12 h-12 bg-green-500 text-white rounded-full flex items-center justify-center font-bold text-lg"
+            >
+              RK
+            </div>
+            <div>
+              <h3 class="font-semibold text-gray-800">Rahul Kumar</h3>
+              <p class="text-sm text-gray-500">Software Engineer</p>
+            </div>
+          </div>
+          <p class="text-gray-700">
+            Very professional service. I appreciated the transparency in charges
+            and the timely communication throughout the loan approval.
+          </p>
+        </div>
+
+        <!-- Card 3 -->
+        <div
+          class="bg-yellow-50 p-6 rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300"
+        >
+          <div class="flex items-center gap-4 mb-4">
+            <div
+              class="w-12 h-12 bg-purple-500 text-white rounded-full flex items-center justify-center font-bold text-lg"
+            >
+              PN
+            </div>
+            <div>
+              <h3 class="font-semibold text-gray-800">Pooja Nair</h3>
+              <p class="text-sm text-gray-500">HR Manager</p>
+            </div>
+          </div>
+          <p class="text-gray-700">
+            Hassle-free documentation and quick disbursal. I’d recommend this to
+            anyone looking for a personal loan with minimal delays.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- faqs -->
+    <section class="py-0 mb-5 scroll-mt-28 px-4 bg-white" id="faqs">
+      <h2 class="text-3xl font-bold text-center mb-10 mt-5 text-[#F44336]">
+        FAQs
+      </h2>
+
+      <div id="faq-container" class="max-w-3xl mx-auto space-y-4">
+        <!-- FAQ 1 -->
+        <div class="border rounded-lg overflow-hidden">
+          <button
+            class="w-full flex items-center justify-between p-4 text-left font-semibold faq-question"
+          >
+            <span
+              >What types of loans do people grow financial solution
+              offer?</span
+            >
+            <span class="text-xl">+</span>
+          </button>
+          <div class="faq-answer px-4 pb-4 hidden text-gray-700 text-sm">
+            people grow financial solution provides a diverse range of loan
+            options, including personal loans, home loans, and business loans,
+            catering to various financial needs.
+          </div>
+        </div>
+
+        <!-- FAQ 2 -->
+        <div class="border rounded-lg overflow-hidden">
+          <button
+            class="w-full flex items-center justify-between p-4 text-left font-semibold faq-question"
+          >
+            <span
+              >How do I apply for a loan with people grow financial
+              solution?</span
+            >
+            <span class="text-xl">+</span>
+          </button>
+          <div class="faq-answer px-4 pb-4 hidden text-gray-700 text-sm">
+            You can apply through our online portal or visit our office for a
+            personalized consultation with our finance experts.
+          </div>
+        </div>
+
+        <!-- FAQ 3 -->
+        <div class="border rounded-lg overflow-hidden">
+          <button
+            class="w-full flex items-center justify-between p-4 text-left font-semibold faq-question"
+          >
+            <span
+              >What factors determine loan eligibility at people grow financial
+              solution?</span
+            >
+            <span class="text-xl">+</span>
+          </button>
+          <div class="faq-answer px-4 pb-4 hidden text-gray-700 text-sm">
+            Eligibility is determined based on your income, credit history, loan
+            amount, and repayment capacity.
+          </div>
+        </div>
+
+        <!-- FAQ 4 -->
+        <div class="border rounded-lg overflow-hidden">
+          <button
+            class="w-full flex items-center justify-between p-4 text-left font-semibold faq-question"
+          >
+            <span>What is the typical turnaround time for loan approval?</span>
+            <span class="text-xl">+</span>
+          </button>
+          <div class="faq-answer px-4 pb-4 hidden text-gray-700 text-sm">
+            Most loans are approved within 48 hours of document verification and
+            eligibility confirmation.
+          </div>
+        </div>
+
+        <!-- FAQ 5 -->
+        <div class="border rounded-lg overflow-hidden">
+          <button
+            class="w-full flex items-center justify-between p-4 text-left font-semibold faq-question"
+          >
+            <span
+              >Are there any hidden fees associated with people grow financial
+              solution?</span
+            >
+            <span class="text-xl">+</span>
+          </button>
+          <div class="faq-answer px-4 pb-4 hidden text-gray-700 text-sm">
+            No, we maintain full transparency and ensure all charges are clearly
+            communicated before agreement.
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- We Are Available in Cities -->
+    <!-- we are available in  -->
+    <section class="text-center py-6">
+      <h2 class="text-xl md:text-2xl font-medium text-red-600 mb-6">
+        We Are Available In Cities
+      </h2>
+
+      <div class="bg-red-800 text-white px-6 py-6 max-w-6xl mx-auto rounded-md">
+        <div
+          class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-y-3 gap-x-8 text-left font-semibold text-base"
+        >
+          <div>
+            <p>Ludhiana</p>
+            <p>Raipur</p>
+            <p>Hazira</p>
+            <p>Vadodara</p>
+            <p>Gujarat</p>
+            <p>Nashik</p>
+            <p>Valsad</p>
+            <p>Mumbai</p>
+            <p>Hyderabad</p>
+          </div>
+          <div>
+            <p>Jalandhar</p>
+            <p>Indore</p>
+            <p>Mangalore</p>
+            <p>Daman</p>
+            <p>Umbergaon</p>
+            <p>Jodhpur</p>
+            <p>Pune</p>
+            <p>Udvada</p>
+            <p>Ahmedabad</p>
+          </div>
+          <div>
+            <p>Vikramgad</p>
+            <p>Surat</p>
+            <p>Bhopal</p>
+            <p>Jaipur</p>
+            <p>Silvassa</p>
+            <p>Kevadiya</p>
+            <p>Kolkata</p>
+            <p>Vapi</p>
+          </div>
+          <div>
+            <p>Bharuch</p>
+            <p>Saputara</p>
+            <p>Nagpur</p>
+            <p>Varanasi</p>
+            <p>Delhi</p>
+            <p>Diu</p>
+            <p>Bangalore</p>
+            <p>Lucknow</p>
+          </div>
+        </div>
+
+        <!-- Contact Us Button -->
+        <div class="mt-8 flex justify-center">
+          <a
+            href="../contactus.html"
+            class="bg-yellow-500 text-white px-6 py-3 rounded-full border-2 border-yellow-500 hover:bg-white hover:text-black transition-colors duration-300"
+          >
+            Contact Us
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <!-- Footer -->
+    <footer class="bg-black text-yellow-400 py-12">
+      <div
+        class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-4 gap-y-10 gap-x-14"
+      >
+        <!-- Logo & Contact -->
+        <div>
+          <div class="flex items-center mb-6">
+            <img
+              src="your_logo.png"
+              alt="Logo"
+              class="h-14 w-14 mr-3 animate-pulse"
+            />
+            <div class="font-bold text-lg">
+              People Grow Financial<br />Solution
+            </div>
+          </div>
+          <p class="text-sm text-gray-400 mb-4">
+            Providing smart solutions for all your financial needs.
+          </p>
+          <div class="text-sm space-y-2">
+            <p class="flex items-center hover:text-white transition">
+              📞 <span class="ml-2">+91 9953530096</span>
+            </p>
+
+            <p class="ml-6 text-gray-500">9:30am - 7:00pm</p>
+          </div>
+        </div>
+
+        <!-- Loans -->
+        <div>
+          <h3 class="text-lg font-semibold mb-5 text-yellow-300">Loans</h3>
+          <div class="grid grid-cols-2 gap-x-10 gap-y-3 text-sm">
+            <a
+              href="../loans/personalLoan.html"
+              class="hover:text-white transition"
+              >› Personal Loan</a
+            >
+            <a
+              href="../loans/usedCarLoan.html"
+              class="hover:text-white transition"
+              >› Used Car Loan</a
+            >
+
+            <a href="../loans/homeLoan.html" class="hover:text-white transition"
+              >› Home Loan</a
+            >
+            <a
+              href="../loans/carRefinance.html"
+              class="hover:text-white transition"
+              >› Car Refinance</a
+            >
+
+            <a
+              href="../loans/businessLoan.html"
+              class="hover:text-white transition"
+              >› Business Loan</a
+            >
+            <a
+              href="../loans/educationLoan.html"
+              class="hover:text-white transition"
+              >› Education Loan</a
+            >
+
+            <a
+              href="../loans/loanAgainstProperty.html"
+              class="hover:text-white whitespace-nowrap transition"
+              >› Loan Against Property</a
+            >
+            <a
+              href="../loans/workingCapital.html"
+              class="hover:text-white transition"
+              >› Working Capital</a
+            >
+
+            <a
+              href="./unsecuredOdLimit.html"
+              class="hover:text-white transition"
+              >› Unsecured OD Limit</a
+            >
+          </div>
+        </div>
+
+        <!-- Knowledge Hub -->
+        <div>
+          <h3 class="text-lg font-semibold mb-5 text-yellow-300">
+            Knowledge Hub
+          </h3>
+          <div class="grid grid-cols-2 gap-x-10 gap-y-3 text-sm">
+            <a
+              href="../loans/personalLoan.html"
+              class="hover:text-white transition"
+              >› Personal Loan</a
+            >
+            <a
+              href="../loans/usedCarLoan.html"
+              class="hover:text-white transition"
+              >› Used Car Loan</a
+            >
+
+            <a href="../loans/homeLoan.html" class="hover:text-white transition"
+              >› Home Loan</a
+            >
+            <a
+              href="../loans/carRefinance.html"
+              class="hover:text-white transition"
+              >› Car Refinance</a
+            >
+
+            <a
+              href="../loans/businessLoan.html"
+              class="hover:text-white transition"
+              >› Business Loan</a
+            >
+            <a
+              href="../loans/educationLoan.html"
+              class="hover:text-white transition"
+              >› Education Loan</a
+            >
+
+            <a
+              href="../loans/loanAgainstProperty.html"
+              class="hover:text-white whitespace-nowrap transition"
+              >› Loan Against Property</a
+            >
+            <a
+              href="../loans/workingCapital.html"
+              class="hover:text-white transition"
+              >› Working Capital</a
+            >
+
+          <a
+              href="./unsecuredOdLimit.html"
+              class="hover:text-white transition"
+              >› Unsecured OD Limit</a
+            >
+          </div>
+        </div>
+
+        <!-- Company Info -->
+        <div>
+          <h3 class="text-lg font-semibold mb-5 text-yellow-300">Company</h3>
+          <ul class="space-y-3 text-sm">
+            <li>
+              <a
+                href="../about.html"
+                target="_blank"
+                class="hover:text-white transition"
+                >› About Us</a
+              >
+            </li>
+            <li>
+              <a
+                href="../contactus.html"
+                target="_blank"
+                class="hover:text-white transition"
+                >› Contact Us</a
+              >
+            </li>
+            <li>
+              <a href="#" class="hover:text-white transition">› Offers</a>
+            </li>
+            <li>
+              <a href="../privacyPolicy.html" class="hover:text-white transition"
+                >› Privacy Policy</a
+              >
+            </li>
+            <li>
+              <a
+                href="../termsAndConditions.html"
+                class="hover:text-white transition"
+                >› Terms & Conditions</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Divider -->
+      <div
+        class="border-t border-yellow-700 mt-10 pt-6 flex flex-col md:flex-row items-center justify-between px-6 text-gray-500 text-sm"
+      >
+        <p>© 2025 People Grow Financial Solution. All Rights Reserved.</p>
+
+        <!-- Social Icons -->
+        <div class="flex space-x-5 mt-4 md:mt-0">
+          <a href="#" class="hover:scale-125 transition-transform duration-300"
+            ><img
+              src="../assests/icons/2023_Facebook_icon.svg.png"
+              alt="FB"
+              class="h-5 w-5"
+          /></a>
+          <a href="#" class="hover:scale-125 transition-transform duration-300"
+            ><img
+              src="../assests/icons/Instagram_logo_2016.svg.webp"
+              alt="IG"
+              class="h-5 w-5"
+          /></a>
+          <a href="#" class="hover:scale-125 transition-transform duration-300"
+            ><img
+              src="../assests/icons/WhatsApp.svg.webp"
+              alt="WA"
+              class="h-5 w-5"
+          /></a>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button
+      id="backToTopBtn"
+      class="fixed right-6 bottom-6 bg-yellow-500 text-white p-3 rounded-full shadow-lg transition-all duration-300 hover:bg-yellow-600 hover:scale-110 opacity-0 pointer-events-none z-50"
+      title="Back to top"
+    >
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        class="h-6 w-6"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke="currentColor"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          d="M5 15l7-7 7 7"
+        />
+      </svg>
+    </button>
+
+    <script>
+      // FAQ toggle
+      document.querySelectorAll(".faq-question").forEach((button) => {
+        button.addEventListener("click", () => {
+          const answer = button.nextElementSibling;
+          const allAnswers = document.querySelectorAll(".faq-answer");
+          const allButtons = document.querySelectorAll(
+            ".faq-question span:last-child"
+          );
+
+          // Close all answers except the one clicked
+          allAnswers.forEach((a) => {
+            if (a !== answer) {
+              a.classList.add("hidden");
+            }
+          });
+
+          // Reset all icons
+          allButtons.forEach((icon) => {
+            icon.textContent = "+";
+          });
+
+          // Toggle the clicked one
+          if (answer.classList.contains("hidden")) {
+            answer.classList.remove("hidden");
+            button.querySelector("span:last-child").textContent = "-";
+          } else {
+            answer.classList.add("hidden");
+            button.querySelector("span:last-child").textContent = "+";
+          }
+        });
+      });
+
+      //backtotop
+      const backToTopBtn = document.getElementById("backToTopBtn");
+      const footer = document.querySelector("footer");
+
+      window.addEventListener("scroll", () => {
+        const scrollY = window.scrollY;
+        const windowHeight = window.innerHeight;
+        const documentHeight = document.documentElement.scrollHeight;
+
+        // Show/hide button
+        if (scrollY > 400) {
+          backToTopBtn.classList.remove("opacity-0", "pointer-events-none");
+          backToTopBtn.classList.add("opacity-100");
+        } else {
+          backToTopBtn.classList.add("opacity-0", "pointer-events-none");
+          backToTopBtn.classList.remove("opacity-100");
+        }
+
+        // Push button up when near footer
+        const footerRect = footer.getBoundingClientRect();
+        const isFooterVisible = footerRect.top < window.innerHeight;
+
+        if (isFooterVisible) {
+          backToTopBtn.style.bottom = "100px"; // lift above icons
+        } else {
+          backToTopBtn.style.bottom = "24px"; // default (6 = 1.5rem = 24px)
+        }
+      });
+
+      backToTopBtn.addEventListener("click", () => {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      });
+    </script>
+  </body>
+</html>
