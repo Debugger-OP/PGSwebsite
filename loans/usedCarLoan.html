@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -46,7 +46,14 @@
       <div
         class="container mx-auto px-4 py-4 flex justify-between items-center"
       >
-        <h1 class="text-xl font-bold text-yellow-600">
+        <a href="../index.html" class="flex items-center">
+          <img
+            src="../assests/images/PGF_logo.png"
+            alt="People Grow Financial Solution"
+            class="h-12 w-auto"
+          />
+        </a>
+        <h1 class="text-xl font-bold ml-4 text-yellow-600">
           People Grow Financial Solution
         </h1>
 
@@ -176,7 +183,9 @@
               </li>
             </ul>
           </div>
-          <a href="contactus.html" class="hover:text-yellow-600">Contact Us</a>
+          <a href="../contactus.html" class="hover:text-yellow-600"
+            >Contact Us</a
+          >
         </nav>
       </div>
     </header>
@@ -720,9 +729,9 @@
         <div>
           <div class="flex items-center mb-6">
             <img
-              src="your_logo.png"
+              src="./assests/images/PGF_logo.png"
               alt="Logo"
-              class="h-14 w-14 mr-3 animate-pulse"
+              class="h-20 w-auto mr-3"
             />
             <div class="font-bold text-lg">
               People Grow Financial<br />Solution
@@ -940,7 +949,7 @@
           const answer = button.nextElementSibling;
           const allAnswers = document.querySelectorAll(".faq-answer");
           const allButtons = document.querySelectorAll(
-            ".faq-question span:last-child"
+            ".faq-question span:last-child",
           );
 
           // Close all answers except the one clicked
